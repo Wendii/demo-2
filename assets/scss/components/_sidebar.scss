@@ -1,0 +1,115 @@
+/** Sidebar css **/
+.gx-sb-list {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	li {
+		padding: 5px 0;
+		&:last-child {
+			padding-bottom: 0;
+		}
+		li {
+			padding: 5px 0 0 30px;
+			i {
+				font-size: 12px !important;
+			}
+		}
+	}
+	.sb-subdrop-item {
+		padding-left: 25px;
+		> a {
+			@include ease3;
+			width: 100%;
+			color: $sb-item-color !important;
+			font-size: 14px !important;
+			font-weight: 400 !important;
+			display: flex;
+			align-items: center;
+			line-height: 18px !important;
+		}
+	}
+
+	.gx-sb-title {
+		margin-top: 30px;
+		padding: 0 0 5px 0;
+		text-transform: uppercase;
+		color: $bbb;
+		font-size: 13px;
+		font-weight: 600;
+	}
+
+	.gx-sb-item-separator {
+		width: 100%;
+		height: 1px;
+		margin: 12px 0;
+		padding: 0;
+		display: block;
+		background-color: $separator;
+	}
+
+	.gx-sb-item.home {
+		padding: 12px;
+		background-color: $separator;
+		border-radius: 5px;
+	}
+	.load-active {
+		> a {
+			.drop-arrow {
+				transform: rotate(-90deg);
+			}
+		}
+	}
+	.load-sub-active {
+		> a {
+			.drop-arrow {
+				transform: rotate(-90deg);
+			}
+		}
+	}
+	.gx-sb-item {
+		position: relative;
+		a {
+			@include ease2;
+			width: 100%;
+			color: $text-555;
+			font-size: 14px;
+			font-weight: 400;
+			display: flex;
+			align-items: center;
+			line-height: 18px;
+			> i {
+				margin-right: 10px;
+				font-size: 19px;
+			}
+			.drop-arrow {
+				@include ease3;
+				position: absolute;
+				right: 10px;
+				font-size: 18px;
+			}
+		}
+	}
+	.gx-sb-drop {
+		padding-top: 12px;
+		padding-left: 0;
+		display: none;
+		a {
+			@include ease2;
+			text-transform: capitalize;
+			font-weight: 300;
+			background-color: $fff;
+			color: $text-555;
+			font-size: 13px;
+			i.ri-git-commit-line {
+				@include ease2;
+				transform: rotate(0deg);
+			}
+		}
+	}
+	.active-drop{
+		ul{
+			display: block;
+		}
+	}
+}
+
